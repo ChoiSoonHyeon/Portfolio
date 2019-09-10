@@ -1,80 +1,106 @@
 <!DOCTYPE>
 <html>
 <head>
+	<!-- META -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<!-- Script Library -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	
 	<style>
-		body {margin: 0 auto;}
-		.main {background: black; color: white; height: 100vh; text-align: center;}
-		.main .title {position: absolute; text-align: right; top: 40vh; font-size: 1vw; left: 10vw;}
-		.main .sub-title {position: absolute; text-align: left; top: 40vh; left: 55vw; font-size: 2vw; color: black; background: white; padding-left: 10px; padding-right: 10px; display: none;}
-		.main .title strong {font-size: 5vw;}
-		
-		.content .item {height: 100vh;}
-		.content .item .description {width: 100%; height: 20vh; margin-bottom: 10vh;}
-		.content .item .description .text {}
-		.content .item .description .text .project-title {margin: 0px; padding-left: 5vw; padding-top: 5vw; font-size: 5vh;}
-		.content .item .description .text .project-content {margin: 0px; padding-left: 5vw; font-size: 2vh;}
-		.content .item .description .logo {height: 100%; float:right;}
-		.content .item .description .logo img {vertical-align: top; }
-		
-		
-		.content .item .product {width: 100%; height: 70vh;}
-		
-		.content #video {background-color: #f5f5f5;}
-		.content #video .product {background-image: url('img/video_product1.png'); background-size: 200px; background-repeat: no-repeat;}
-		
-		.content #mshop {background: linear-gradient(#bc1e1a, #e85956); color: white;}
-		
-		.content #dmall {background-color: white; color: gray;}
-		.content #dmall .project-title {color: #1e9ad8}
+	.item {height: 100vh; overflow: hidden;}
+	.item small {font-size: 60%;}
+	.item-content {padding-top: 40px;}
+	.item-content .image-logo {width: 200px;}
+	
+	.lead {font-size: 1rem;}
+
+	#main {background-color: black; color: white;}
+	#main p {margin: 0px;}
+	#main .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+	#main .title .left-title {display: inline-block; margin-right: 20px;}
+	#main .title .right-title {display: inline-block; vertical-align: top; float: right; background-color: white; color: black;}
+	
+	#video {background-color: #f5f5f5;}
+	#mshop {background: linear-gradient(#bc1e1a, #e85956); color: white;}
+	
+	@media (max-width: 800px) {
+		.image-logo {display: none;}
+	}
+	
+	.image-product {max-width: none; min-height: 85%; height: 85%; margin-left: -330px; margin-top: 30px;}
+
+	@media (min-width: 415px) {
+		.image-product {margin-left: -120px;}
+	}
+
+	@media (min-width: 768px) {
+		.image-product {margin-left: 15px;}
+	}
+	
+	@media (min-width: 880px) {
+		.image-product {width: auto; margin-left: 8.3%; padding-right: 8.3%;}
+	}
+	
+	@media (min-width: 1240px) {
+		.image-product {width: 100%; height: auto;}
+	}
+	
 	</style>
 	
 	<script>
 		$(document).ready(function () {
-			$('.main .sub-title').slideDown('slow');
+			$('.left-title').animate({opacity: 1}, 1000);
+			$('.right-title').slideDown('slow');
 		});
 	</script>
 </head>
 <body>
-
-<div class="main">
-	<div class="title"><h1>SOONHYEON CHOI'S<br><strong>PORTFOLIO BLOG</strong></h1></div>
-	<div class="sub-title"><h1>FOR HISTORY</h1></div>
-</div>
-<div class="content">
-	<div class="item" id="video">
-		<div class="description">
-			<div class="text">
-				<h1 class="project-title">다나와 동영상</h1>
-				<p class="project-content">샵다나와 상품 상세페이지 개발</p>
-				<p class="project-content">(2018.09.10 ~ 2019.02.27)</p><br/>
-				<p class="project-content">45개 이상 채널의 동영상 컨텐츠를 제공하는 서비스</p>
+	<div class="item" id="main">
+		<div class="title">
+			<div class="left-title" style="opacity: 0">
+				<p class="lead">SOONHYEON's</p>
+				<h1>PORTFOLIO BLOG</h1>
 			</div>
-			<div class="logo">
-				<img src="img/danawa.png">
+			<div class="right-title" style="display: none;">
+				<h1 class="display-2">FOR HISTORY</h1>
 			</div>
 		</div>
 	</div>
-	<div class="item" id="mshop">
-		<div class="description">
-			<div class="text">
-				<h1 class="project-title">Project name</h1>
-				<p class="project-content">project content</p>
+	<div class="item item-content" id="video">
+		<div class="container-fluid row">
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h1><strong>다나와 동영상</strong><br><small>(2019.03.19 - 2019.06.11)</small></h1>
+				<p class="lead">다나와 커뮤니티 동영상 서비스, 관리자 페이지 개발<br>45개 이상 채널의 동영상 컨텐츠를 제공하는 서비스입니다.</p>
 			</div>
-		</div>
-	</div>
-	<div class="item" id="dmall">
-		<div class="description">
-			<div class="text">
-				<h1 class="project-title">Project name</h1>
-				<p class="project-content">project content</p>
+			<div class="col-md-2 text-right">
+				<img class="image-logo" src="img/danawa.png">
 			</div>
+			<div class="col-md-1"></div>
 		</div>
+		<img src="img/product_video.png" class="image-product" alt="...">
 	</div>
-</div>
+	<div class="item item-content" id="mshop">
+		<div class="container-fluid row">
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h1><strong>샵다나와 모바일</strong><br><small>(2018.09.10 ~ 2019.02.27)</small></h1>
+				<p class="lead">샵다나와 상품 상세페이지 개발<br>연간 200,000대 조립PC 판매를 기록한 샵다나와 모바일 버전 서비스입니다.</p>
+			</div>
+			<div class="col-md-2 text-right">
+				<img class="image-logo" src="img/danawa.png">
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<img src="img/product_video.png" class="image-product" alt="...">
+	</div>
 </body>
 </html>
