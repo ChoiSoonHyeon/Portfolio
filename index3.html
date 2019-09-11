@@ -5,11 +5,12 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	
-	<script src="js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="js/jquery-3.4.1.min.js"></script>  -->
 	
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	
@@ -18,17 +19,26 @@
 		.item {overflow: hidden;}
 		#video {background-color: #f5f5f5;}
 		#mshop {background: linear-gradient(#bc1e1a, #e85956); color: white;}
+		#dmall h2 {color: #1e9ad8;}
+		#dpg {background: linear-gradient(#3244c1, #8b38e5); color: white;}
+		#shop {background-color: #fde7e7;}
+		#shop h2 {color: #e23e38;}
 		h2 {font-size: 56px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; letter-spacing: 0em;}
 		h3 {font-size: 28px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif;}
 		p {font-size: 17px; color: #888888; font-family: 'Noto Sans KR', sans-serif;}
+		.more-content {color: #0070c9; font-family: 'Noto Sans KR', sans-serif; pointer-events: all; font-size: 24px; line-height: 1.38105; font-weight: 400; letter-spacing: 0.011em}
+		.next-icon {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e")}
 		.content-wrapper {max-width: 980px; margin-left: auto; margin-right: auto; display:flex; justify-content: space-between; flex-direction: row-reverse; align-items: center;}
 		.content-wrapper-left {max-width: 980px; margin-left: auto; margin-right: auto; display:flex; justify-content: space-between; flex-direction: row; align-items: center;}
 		.copy-wrapper {position: relative; width: 50%; text-align: center; padding: 0 0 0 200px;}
 		.copy-wrapper-left {position: relative; width: 50%; text-align: center; padding: 0 0 0 0px; left: 0;}
 		.image-wrapper {position: relative; padding: 65px 0; width: 50%; left: unset; right: 20px;}
 		.image-wrapper-left {position: relative; padding: 65px 0 0 0; width: 50%;}
-		.video-product {background-image: url(img/product_video.png); background-repeat: no-repeat; background-size: 944px 650px; width: 944px; height: 650px; transform: translateX(-30%);}
-		.mshop-product {background-image: url(img/test.png); background-repeat: no-repeat; background-size: 750px 750px; width: 750px; height: 750px; transform: translateX(15%);}
+		.video-product {background-image: url(/Portfolio/img/product_video.png); background-repeat: no-repeat; background-size: 944px 650px; width: 944px; height: 650px; transform: translateX(-30%);}
+		.mshop-product {background-image: url(/Portfolio/img/product_mshop.png); background-repeat: no-repeat; background-size: 550px 1082px; width: 550px; height: 715px; transform: translateX(15%);}
+		.dmall-product {background-image: url(/Portfolio/img/product_dmall.png); background-repeat: no-repeat; background-size: 807px 650px; width: 807px; height: 650px; transform: translateX(-30%);}
+		.dpg-product {background-image: url(/Portfolio/img/product_dpg.png); background-repeat: no-repeat; background-size: 1341px 650px; width: 1341px; height: 650px;}
+		.shop-product {background-image: url(/Portfolio/img/product_shop.png); background-repeat: no-repeat; background-size: 1086px 650px; width: 1086px; height: 650px;}
 		@media (max-width: 1068px) {
 			h2 {
 				font-size: 44px;
@@ -46,13 +56,17 @@
 				font-size: 15px;
 				margin-top: 0.8em;
 			}
+			.more-content {font-size: 17px;}
 			.content-wrapper {max-width: 692px;}
 			.content-wrapper-left {max-width: 692px;}
-			.copy-wrapper {padding: 0 0 0 145px; z-index: 4; pointer-events: none; -webkit-box-flex: 0; flex-grow: 0;}
+			.copy-wrapper {padding: 0 0 0 100px; z-index: 4; pointer-events: none; -webkit-box-flex: 0; flex-grow: 0;}
 			.copy-wrapper-left {padding: 0 50px 0 0; z-index: 4; pointer-events: none; -webkit-box-flex: 0; flex-grow: 0;}
 			.image-wrapper {left: unset; right: 20px; z-index: 1; overflow: visible; flex-grow: 1; -webkit-box-flex: 1; top: 0;}
 			.video-product {width: 450px; height: 310px; background-size: 450px 310px; transform: translateX(-10%);}
-			.mshop-product {width: 550px; height: 550px; background-size: 550px 550px; transform: translateX(5%);}
+			.mshop-product {width: 350px; height: 375px; background-size: 350px 688px; transform: translateX(5%);}
+			.dmall-product {width: 385px; height: 310px; background-size: 385px 310px; transform: translateX(-10%);}
+			.dpg-product {width: 774px; height: 375px; background-size: 774px 375px;}
+			.shop-product {width: 626px; height: 375px; background-size: 626px 375px;}
 		}
 		
 		@media (max-width: 736px) {
@@ -75,6 +89,7 @@
 				font-family: 'Noto Sans KR', sans-serif;
 				margin-top: 0.8em;
 			}
+			.more-content {font-size: 17px;}
 			.content-wrapper {max-width: 100%; display: block;}
 			.content-wrapper-left {max-width: 100%; display: block;}
 			.copy-wrapper {padding: 60px 0 0 0; width: 100%;}
@@ -82,11 +97,23 @@
 			.image-wrapper {padding: 60px 0; width: 100%; right: unset;}
 			.image-wrapper-left {padding: 60px 0 0 0; width: 100%;}
 			.video-product {width: 320px; height: 220px; background-size: 320px 220px; margin-left: auto; margin-right: auto; transform: unset;}
-			.mshop-product {width: 320px; height: 320px; background-size: 420px 320px; margin-left: auto; transform: unset;}
+			.mshop-product {width: 320px; height: 375px; background-size: 320px 629px; margin-left: auto; margin-right: auto; transform: unset;}
+			.dmall-product {width: 320px; height: 285px; background-size: 320px 285px; margin-left: auto; margin-right: auto; transform: unset;}
+			.dpg-product {width: 800px; height: 388px; background-size: 800px 388px; margin-left: auto; transform: unset; transform: translateX(5%);}
+			.shop-product {width: 648px; height: 388px; background-size: 648px 388px; margin-left: auto;  margin-right: auto; transform: unset;}
 		}
 		
 		#mshop p {color: white;}
+		#dpg p {color: white;}
+		#mshop .more-content {color: white;}
+		#dpg .more-content {color: white;}
 		
+		#main {height: 100vh; overflow: hidden;}
+		#main {background-color: black; color: white;}
+		#main p {margin: 0px;}
+		#main .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+		#main .title .left-title {display: inline-block; margin-right: 20px;}
+		#main .title .right-title {display: inline-block; vertical-align: top; float: right; background-color: white; color: black;}
 		
 	</style>
 	
@@ -95,13 +122,24 @@
 	</script>
 </head>
 <body>
+	<div class="item" id="main">
+		<div class="title">
+			<div class="left-title">
+				<p class="lead">SOONHYEON's</p>
+				<h1>PORTFOLIO BLOG</h1>
+			</div>
+			<div class="right-title">
+				<h1 class="display-2">FOR HISTORY</h1>
+			</div>
+		</div>
+	</div>
 	<div class="item" id="video">
 		<div class="content-wrapper">
 			<div class="copy-wrapper">
 				<h2>ㄷㅂㄷ</h2>
 				<h3>45개 이상 채널<br>동영상 컨텐츠</h3>
-				<p>다나와 커뮤니티 동영상 서비스,<br>관리자 페이지 개발<br>(2019.03.19 ~ 2019.06.11)</p>
-				<a>더 알아보기</a>
+				<p>다나와 커뮤니티 동영상 서비스,<br>관리자 페이지 개발<br>(2019.03.19 - 2019.06.11)</p>
+				<a href="" class="more-content">더 알아보기 <i class="fas fa-chevron-right"></i></a>
 			</div>
 			<div class="image-wrapper">
 				<figure class="video-product"></figure>
@@ -112,12 +150,51 @@
 		<div class="content-wrapper-left">
 			<div class="copy-wrapper-left">
 				<h2>샵다나와 모바일</h2>
-				<h3>45개 이상 채널<br>동영상 컨텐츠</h3>
-				<p>다나와 커뮤니티 동영상 서비스,<br>관리자 페이지 개발<br>(2019.03.19 ~ 2019.06.11)</p>
-				<a>더 알아보기</a>
+				<h3>연간 200,000대 조립PC 판매<br>마켓 서비스</h3>
+				<p>샵다나와 모바일 상품 상세페이지 개발<br>(2018.09.10 - 2019.02.27)</p>
+				<a href="" class="more-content">더 알아보기 <i class="fas fa-chevron-right"></i></a>
 			</div>
 			<div class="image-wrapper-left">
 				<figure class="mshop-product"></figure>
+			</div>
+		</div>
+	</div>
+	<div class="item" id="dmall">
+		<div class="content-wrapper">
+			<div class="copy-wrapper">
+				<h2>장터 관리자</h2>
+				<h3>연간 170,000건 이상<br>중고거래 서비스<br>관리자 페이지</h3>
+				<p>다나와 장터<br>관리자 페이지 개발<br>(2018.02.21 - 2018.04.30)</p>
+				<a href="" class="more-content">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+			</div>
+			<div class="image-wrapper">
+				<figure class="dmall-product"></figure>
+			</div>
+		</div>
+	</div>
+	<div class="item" id="dpg">
+		<div class="content-wrapper-left">
+			<div class="copy-wrapper-left">
+				<h2>다나와 DPG</h2>
+				<h3>530,000개의 뉴스.<br>3,000,000개의 게시글.</h3>
+				<p>다나와 뉴스, 커뮤니티 서비스<br>유지보수 및 개발<br>(2019.04.01 - 현재)</p>
+				<a href="" class="more-content">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+			</div>
+			<div class="image-wrapper-left">
+				<figure class="dpg-product"></figure>
+			</div>
+		</div>
+	</div>
+	<div class="item" id="shop">
+		<div class="content-wrapper-left">
+			<div class="copy-wrapper-left">
+				<h2>샵다나와</h2>
+				<h3>2,551억원의 거래금액.<br>조립PC 전문 마켓 서비스</h3>
+				<p>샵다나와 서비스 유지보수 및 개발<br>(2017.02.01 - 2019.03.31)</p>
+				<a href="" class="more-content">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+			</div>
+			<div class="image-wrapper-left">
+				<figure class="shop-product"></figure>
 			</div>
 		</div>
 	</div>
