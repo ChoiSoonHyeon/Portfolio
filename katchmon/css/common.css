@@ -1,0 +1,41 @@
+@font-face {font-family: BMHANNAAir; src: url(../font/BMHANNAAir.ttf);}
+@font-face {font-family: BMHANNAPro; src: url(../font/BMHANNAPro.ttf);}
+
+body {margin: 0px;}
+h1 {font-family: 'BMHANNAPro'; font-size: 80px; margin: 0px;}
+h2 {font-family: 'BMHANNAPro'; font-size: 60px; margin: 0px;}
+h3 {font-family: 'BMHANNAPro'; font-size: 40px; margin: 0px;}
+p {font-family: 'BMHANNAAir'; font-size: 24px; margin: 0px; font-weight: 500;}
+a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
+
+.dummy {opacity: 0;}
+
+.katchmon-content-self {width: 100%; text-align: center; margin-left: auto; margin-right: auto; padding-top: 23vh; padding-bottom: 23vh;}
+.katchmon-content-symbol-container {margin-top: 40px; margin-bottom: 25px;}
+.katchmon-content-symbol-image {width: 200px;}
+.katchmon-content-button-link {color: #000000; text-decoration: none; display: inline-block; margin-top: 40px; border: 2px solid #000000; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px;}
+.katchmon-content-button-link-white {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s;}
+.katchmon-content-button-link-white:hover {color: #000000; box-shadow:0 0 200px 0 rgba(0,0,0,0) inset; background-color: white;}
+.katchmon-content-button-link-green {color: #50ba3b; border: 2px solid #50ba3b; transition: all 0.3s;}
+.katchmon-content-button-link-green:hover {color: #FFFFFF; box-shadow:0 0 200px 0 rgba(0,0,0,0) inset; background-color: #50ba3b;}
+
+@media (max-width: 753px) {
+	h1 {font-size: 64px;}
+	h2 {font-size: 42px;}
+	h3 {font-size: 30px;}
+	p {font-size: 21px;}
+	a { font-size: 18px;}
+	
+	.katchmon-content-symbol-container {margin-top: 20px; margin-bottom: 15px;}
+	.katchmon-content-symbol-image {width: 150px;}
+	.katchmon-content-button-link {margin-top: 20px;}
+}
+
+.slide-fade-enter-active {transition: all 1.5s ease;}
+.slide-fade-enter {transform: translateX(-10vw); opacity: 0;}
+.bounce-enter-active {animation: bounce-in 1s;}
+@keyframes bounce-in {
+	0% {transform: scale(0);}
+	30% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}
