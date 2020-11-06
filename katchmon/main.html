@@ -16,6 +16,7 @@
 <script type="text/javascript" src="js/lib/vue-2.5.16.min.js"></script>
 <script type="text/javascript" src="js/lib/babel.min.js"></script>
 <script type="text/javascript" src="js/lib/es6-promise.min.js"></script>
+<script type="text/javascript" src="js/component/question.js"></script>
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -49,11 +50,9 @@
 			},
 			checkAllIsInViewPort() {
 				if (this.introduce.isShowSymbol === false && this.isInViewPort(this.introduce.title)) {
-					console.log('finded katchmon');
 					this.introduce.isShowSymbol = true;
 				}
 				if (this.contact.isShowSymbol === false && this.isInViewPort(this.contact.title)) {
-					console.log('finded contact');
 					this.contact.isShowSymbol = true;
 				}
 			}
@@ -78,7 +77,7 @@
 						<img v-if="introduce.isShowSymbol" class="katchmon-content-symbol-image" src="image/katchmon-bgnone.png" alt="katchmon"/>
 					</transition>
 				</div>
-				<a class="katchmon-content-button-link katchmon-content-button-link-white" href="#">팀 알아보기</a>
+				<a class="katchmon-content-button-link katchmon-content-button-link-white" href="introduce.html">팀 알아보기</a>
 			</div>
 			<div class="katchmon-content-self katchmon-main-contact">
 				<h1 id="katchmon-main-contact-title">CONTACT</h1>
@@ -92,6 +91,7 @@
 				<p>katchmon의 해결책을 들으실 수 있습니다.</p>
 				<a class="katchmon-content-button-link katchmon-content-button-link-green" href="#">문의하기</a>
 			</div>
+			<katchmon-question-component></katchmon-question-component>
 		</div>`
 	});
 	</script>

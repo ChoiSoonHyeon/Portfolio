@@ -7,17 +7,42 @@ h2 {font-family: 'BMHANNAPro'; font-size: 60px; margin: 0px;}
 h3 {font-family: 'BMHANNAPro'; font-size: 40px; margin: 0px;}
 p {font-family: 'BMHANNAAir'; font-size: 24px; margin: 0px; font-weight: 500;}
 a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
-
+.small-text {font-family: 'BMHANNAAir'; font-size: 16px; margin: 0px; font-weight: 500;}
 .dummy {opacity: 0;}
+.margin-top-10 {margin-top: 10px;}
+.margin-top-20 {margin-top: 20px;}
 
 .katchmon-content-self {width: 100%; text-align: center; margin-left: auto; margin-right: auto; padding-top: 23vh; padding-bottom: 23vh;}
 .katchmon-content-symbol-container {margin-top: 40px; margin-bottom: 25px;}
 .katchmon-content-symbol-image {width: 200px;}
 .katchmon-content-button-link {color: #000000; text-decoration: none; display: inline-block; margin-top: 40px; border: 2px solid #000000; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px;}
 .katchmon-content-button-link-white {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s;}
-.katchmon-content-button-link-white:hover {color: #000000; box-shadow:0 0 200px 0 rgba(0,0,0,0) inset; background-color: white;}
+.katchmon-content-button-link-white:hover {color: #000000; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #FFFFFF;}
 .katchmon-content-button-link-green {color: #50ba3b; border: 2px solid #50ba3b; transition: all 0.3s;}
-.katchmon-content-button-link-green:hover {color: #FFFFFF; box-shadow:0 0 200px 0 rgba(0,0,0,0) inset; background-color: #50ba3b;}
+.katchmon-content-button-link-green:hover {color: #FFFFFF; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #50ba3b;}
+
+.katchmon-common-button {font-family: 'BMHANNAAir'; font-size: 24px; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px; cursor: pointer;}
+.katchmon-common-button:focus {outline: 0;}
+.katchmon-common-button-purple {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s; background-color: #b973ff;}
+.katchmon-common-button-purple:hover {color: #b973ff; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #FFFFFF;}
+
+.katchmon-common-question-self {position: fixed; z-index: 1000; bottom: 40px; right: 55px;}
+.katchmon-common-question-input-self {}
+.katchmon-common-question-input-header {background-color: #7f00ff; width: 350px; height: 70px; border-radius: 20px 20px 0px 0px;}
+.katchmon-common-question-picture {width: 42px; height: 42px; background-image: url('../image/ico_katchmoneye.png'); background-repeat: no-repeat; background-position: center; display: inline-block; margin: 15px;}
+.katchmon-common-question-profile {display: inline-block; vertical-align: top; margin-top: 18px;}
+.katchmon-common-question-profile .small-text {color: #FFFFFF;}
+.katchmon-common-question-input-body {background-color: #b973ff; width: 350px; height: 530px; border-radius: 0px 0px 20px 20px; padding: 15px; box-sizing: border-box; -webkit-box-sizing:border-box; -moz-box-sizing: border-box; text-align: center;}
+.katchmon-common-question-input-body textarea {height: 330px; resize: none;}
+.katchmon-common-question-self .katchmon-common-button {font-size: 18px; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;}
+.katchmon-common-question-button-open {background-image: url('../image/ico_question.png'); background-color: #7f00ff; background-repeat: no-repeat; background-position: center; cursor: pointer; width: 80px; height: 80px;  border-radius: 80px; border: none; transition-duration: 0.3s; float: right;}
+.katchmon-common-question-button-open:hover {background-color: #400080;}
+.katchmon-common-question-button-open:focus {outline: 0;}
+.katchmon-common-question-button-close {vertical-align: top; float: right; margin-right: 15px; background-color: transparent; border: none; margin-top: 22px; cursor: pointer; color: #FFFFFF; font-size: 20px;}
+.katchmon-common-question-button-close:focus {outline: 0;}
+
+.katchmon-form-control {width: 100%; font-size: 16px; padding: 10px; border-radius: 10px; border: none; box-sizing: border-box; -webkit-box-sizing:border-box; -moz-box-sizing: border-box; color: #333333; font-family: 'BMHANNAAir';}
+.katchmon-form-control:focus {outline: none;}
 
 @media (max-width: 753px) {
 	h1 {font-size: 64px;}
@@ -31,8 +56,19 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 	.katchmon-content-button-link {margin-top: 20px;}
 }
 
+.slide-fade-bottom-enter-active {transition: all 0.5s ease;}
+.slide-fade-bottom-leave-active {transition: all 0.5s ease; transform: translateX(10vw); opacity: 0;}
+.slide-fade-bottom-enter {transform: translateY(10vw); opacity: 0;}
+.slide-fade-bottom-leave {opacity: 100;}
+
+.slide-fade-bottom-onlyenter-enter-active {transition: all 0.5s ease;}
+.slide-fade-bottom-onlyenter-leave-active {transition: all 0.0s ease;, opacity: 0;}
+.slide-fade-bottom-onlyenter-enter {transform: translateY(10vw); opacity: 0;}
+.slide-fade-bottom-onlyenter-leave {opacity: 100;}
+
 .slide-fade-enter-active {transition: all 1.5s ease;}
 .slide-fade-enter {transform: translateX(-10vw); opacity: 0;}
+
 .bounce-enter-active {animation: bounce-in 1s;}
 @keyframes bounce-in {
 	0% {transform: scale(0);}
