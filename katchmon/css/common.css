@@ -26,8 +26,8 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 .katchmon-common-button-purple {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s; background-color: #b973ff;}
 .katchmon-common-button-purple:hover {color: #b973ff; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #FFFFFF;}
 
-.katchmon-common-question-self {position: fixed; z-index: 1000; bottom: 40px; right: 55px;}
-.katchmon-common-question-input-self {}
+.katchmon-common-question-self {}
+.katchmon-common-question-input-self {position: fixed; z-index: 1000; bottom: 40px; right: 55px;}
 .katchmon-common-question-input-header {background-color: #7f00ff; width: 350px; height: 70px; border-radius: 20px 20px 0px 0px;}
 .katchmon-common-question-picture {width: 42px; height: 42px; background-image: url('../image/ico_katchmoneye.png'); background-repeat: no-repeat; background-position: center; display: inline-block; margin: 15px;}
 .katchmon-common-question-profile {display: inline-block; vertical-align: top; margin-top: 18px;}
@@ -35,7 +35,7 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 .katchmon-common-question-input-body {background-color: #b973ff; width: 350px; height: 530px; border-radius: 0px 0px 20px 20px; padding: 15px; box-sizing: border-box; -webkit-box-sizing:border-box; -moz-box-sizing: border-box; text-align: center;}
 .katchmon-common-question-input-body textarea {height: 330px; resize: none;}
 .katchmon-common-question-self .katchmon-common-button {font-size: 18px; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;}
-.katchmon-common-question-button-open {background-image: url('../image/ico_question.png'); background-color: #7f00ff; background-repeat: no-repeat; background-position: center; cursor: pointer; width: 80px; height: 80px;  border-radius: 80px; border: none; transition-duration: 0.3s; float: right;}
+.katchmon-common-question-button-open {background-image: url('../image/ico_question.png'); background-color: #7f00ff; background-repeat: no-repeat; background-position: center; cursor: pointer; width: 80px; height: 80px;  border-radius: 80px; border: none; transition-duration: 0.3s; float: right; position: fixed; z-index: 1000; bottom: 40px; right: 55px;}
 .katchmon-common-question-button-open:hover {background-color: #400080;}
 .katchmon-common-question-button-open:focus {outline: 0;}
 .katchmon-common-question-button-close {vertical-align: top; float: right; margin-right: 15px; background-color: transparent; border: none; margin-top: 22px; cursor: pointer; color: #FFFFFF; font-size: 20px;}
@@ -54,6 +54,12 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 	.katchmon-content-symbol-container {margin-top: 20px; margin-bottom: 15px;}
 	.katchmon-content-symbol-image {width: 150px;}
 	.katchmon-content-button-link {margin-top: 20px;}
+	
+	.katchmon-common-question-input-self {bottom: 0px; right: 0px;}
+	.katchmon-common-question-input-header {border-radius: 0px; width: 100vw;}
+	.katchmon-common-question-input-body {border-radius: 0px; width: 100vw; height: calc(100vh - 70px);}
+	.katchmon-common-question-input-body textarea {height: calc(100vh - 70px - 40px - 40px - 120px);}
+	.katchmon-common-question-button-open {bottom: 20px; right: 20px;}
 }
 
 .slide-fade-bottom-enter-active {transition: all 0.5s ease;}

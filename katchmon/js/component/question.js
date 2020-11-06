@@ -31,7 +31,9 @@ Vue.component('katchmon-question-component', {
 						'<input v-model="name" type="text" class="katchmon-form-control" placeholder="이름" maxlength="20">' + 
 						'<input v-model="email" type="text" class="katchmon-form-control margin-top-10" placeholder="회신받으실 이메일" maxlength="50">' + 
 						'<textarea v-model="content" class="katchmon-form-control margin-top-10" placeholder="문의 내용"></textarea>' + 
+						'<div>' + 
 						'<button @click="sendQuestionPost()" class="katchmon-common-button katchmon-common-button-purple margin-top-20">문의하기</button>' + 
+						'</div>' + 
 					'</div>' + 
 				'</div>' + 
 			'</transition>' + 
