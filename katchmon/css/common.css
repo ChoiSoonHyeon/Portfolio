@@ -67,7 +67,7 @@ ul {list-style: none; padding: 0;}
 	.katchmon-common-question-input-self {bottom: 0px; right: 0px; left: 0px; top: 0px;}
 	.katchmon-common-question-input-header {border-radius: 0px; width: 100%;}
 	.katchmon-common-question-input-body {border-radius: 0px; width: 100%; height: calc(100vh - 70px);}
-	.katchmon-common-question-input-body textarea {height: calc(100vh - 70px - 40px - 40px - 120px);}
+	.katchmon-common-question-input-body textarea {height: calc(100vh - 70px - 40px - 40px - 200px);}
 	.katchmon-common-question-button-open {bottom: 20px; right: 20px;}
 }
 
