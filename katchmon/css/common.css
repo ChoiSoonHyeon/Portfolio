@@ -7,24 +7,33 @@ h2 {font-family: 'BMHANNAPro'; font-size: 60px; margin: 0px;}
 h3 {font-family: 'BMHANNAPro'; font-size: 40px; margin: 0px;}
 p {font-family: 'BMHANNAAir'; font-size: 24px; margin: 0px; font-weight: 500;}
 a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
+ul {list-style: none; padding: 0;}
 .small-text {font-family: 'BMHANNAAir'; font-size: 16px; margin: 0px; font-weight: 500;}
 .dummy {opacity: 0;}
 .margin-top-10 {margin-top: 10px;}
 .margin-top-20 {margin-top: 20px;}
+.margin-top-40 {margin-top: 40px;}
+.margin-bottom-10 {margin-bottom: 10px;}
 
 .katchmon-content-self {width: 100%; text-align: center; margin-left: auto; margin-right: auto; padding-top: 23vh; padding-bottom: 23vh;}
 .katchmon-content-symbol-container {margin-top: 40px; margin-bottom: 25px;}
 .katchmon-content-symbol-image {width: 200px;}
-.katchmon-content-button-link {color: #000000; text-decoration: none; display: inline-block; margin-top: 40px; border: 2px solid #000000; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px;}
+.katchmon-content-button-link {color: #000000; text-decoration: none; display: inline-block; border: 2px solid #000000; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px;}
 .katchmon-content-button-link-white {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s;}
 .katchmon-content-button-link-white:hover {color: #000000; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #FFFFFF;}
 .katchmon-content-button-link-green {color: #50ba3b; border: 2px solid #50ba3b; transition: all 0.3s;}
 .katchmon-content-button-link-green:hover {color: #FFFFFF; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #50ba3b;}
 
+.katchmon-common-gnb-container {position: fixed; top: 0px; width: 100%; height: 45px; background-color: #333333; opacity: 0.9; line-height: 45px; text-align: center;}
+.katchmon-common-gnb-button-link-home {font-family: 'BMHANNAPro'; font-size: 25px; margin: 0px; color: #FFFFFF; text-decoration: none;}
+.katchmon-common-gnb-container-dummy {width: 100%; height: 60px; background-color: #000000;}
+
 .katchmon-common-button {font-family: 'BMHANNAAir'; font-size: 24px; border-radius: 50px; padding-top: 20px; padding-bottom: 20px; padding-left: 60px; padding-right: 60px; cursor: pointer;}
 .katchmon-common-button:focus {outline: 0;}
 .katchmon-common-button-purple {color: #FFFFFF; border: 2px solid #FFFFFF; transition: all 0.3s; background-color: #b973ff;}
 .katchmon-common-button-purple:hover {color: #b973ff; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #FFFFFF;}
+.katchmon-common-button-green {color: #50ba3b; border: 2px solid #50ba3b; transition: all 0.3s; background-color: transparent;}
+.katchmon-common-button-green:hover {color: #FFFFFF; box-shadow: 0 0 200px 0 rgba(0,0,0,0) inset; background-color: #50ba3b;}
 
 .katchmon-common-question-self {}
 .katchmon-common-question-input-self {position: fixed; z-index: 1000; bottom: 40px; right: 55px;}
@@ -55,9 +64,9 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 	.katchmon-content-symbol-image {width: 150px;}
 	.katchmon-content-button-link {margin-top: 20px;}
 	
-	.katchmon-common-question-input-self {bottom: 0px; right: 0px;}
-	.katchmon-common-question-input-header {border-radius: 0px; width: 100vw;}
-	.katchmon-common-question-input-body {border-radius: 0px; width: 100vw; height: calc(100vh - 70px);}
+	.katchmon-common-question-input-self {bottom: 0px; right: 0px; left: 0px; top: 0px;}
+	.katchmon-common-question-input-header {border-radius: 0px; width: 100%;}
+	.katchmon-common-question-input-body {border-radius: 0px; width: 100%; height: calc(100vh - 70px);}
 	.katchmon-common-question-input-body textarea {height: calc(100vh - 70px - 40px - 40px - 120px);}
 	.katchmon-common-question-button-open {bottom: 20px; right: 20px;}
 }
@@ -75,7 +84,15 @@ a {font-family: 'BMHANNAAir'; font-size: 24px; font-weight: 500;}
 .slide-fade-enter-active {transition: all 1.5s ease;}
 .slide-fade-enter {transform: translateX(-10vw); opacity: 0;}
 
-.bounce-enter-active {animation: bounce-in 1s;}
+.fade-enter-active {transition: all 1s ease;}
+.fade-enter {opacity: 0;}
+
+.slide-frame-enter-active {animation: slide-frame 1s; animation-timing-function: ease;}
+@keyframes slide-frame {
+	0% {width: 0%;}
+}
+
+.bounce-enter-active {animation: bounce-in 1s ease;}
 @keyframes bounce-in {
 	0% {transform: scale(0);}
 	30% {transform: scale(1.2);}

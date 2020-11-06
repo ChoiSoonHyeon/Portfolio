@@ -16,26 +16,100 @@
 <script type="text/javascript" src="js/lib/vue-2.5.16.min.js"></script>
 <script type="text/javascript" src="js/lib/babel.min.js"></script>
 <script type="text/javascript" src="js/lib/es6-promise.min.js"></script>
+<script type="text/javascript" src="js/util/ElementUtils.js"></script>
+<script type="text/javascript" src="js/component/gnb.js"></script>
 <script type="text/javascript" src="js/component/question.js"></script>
 <link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/introduce.css">
 </head>
 <body>
-	
 	<div id="katchmon-content-container"></div>
-	<script>
+	<script type="text/babel">
 	new Vue({
-		el: 'katchmon-content-container',
+		el: '#katchmon-content-container',
 		data: {
-			
+			tech: {
+				title: null,
+				isShowTechScore: false
+			},
+			tempTechDataList: [
+				{name: 'Java', score: 100},
+				{name: 'PHP', score: 95},
+				{name: 'Spring', score: 95},
+				{name: 'MySQL', score: 90},
+				{name: 'Oracle', score: 80},
+				{name: 'mariaDB', score: 80},
+				{name: 'SpringBoot', score: 76},
+				{name: 'HTML', score: 70},
+				{name: 'CSS', score: 70},
+				{name: 'Javascript', score: 70},
+				{name: 'Vue.js', score: 65},
+				{name: 'Cypress', score: 65},
+			],
+			tempCareerDataList: [
+				{serviceType: 'WEB SERVICE', responsibility: '개발 및 유지보수', title: '인사 채용 시스템', imageUrl: 'image/banner_recruit.png', backgroundColor: '#FFFFFF', borderColor: '#777777', textColor: '#000000'},
+				{serviceType: 'WEB SERVICE', responsibility: '개발 및 유지보수', title: '조립PC 전문 온라인 마켓', imageUrl: 'image/banner_market.png', backgroundColor: '#26bcf7', borderColor: '#26bcf7', textColor: '#FFFFFF'}
+			],
 		},
 		methods: {
-			
+			scrollHandler(event) {
+				this.checkAllIsInViewPort();
+			},
+			checkAllIsInViewPort() {
+				if (this.tech.isShowTechScore === false && KATCHMON_ELEMENT_UTILS.isInViewPort(this.tech.title)) {
+					this.tech.isShowTechScore = true;
+				}
+			}
 		},
 		created: function () {},
-		mounted: function () {},
+		mounted: function () {
+			this.tech.title = document.getElementById('katchmon-introduce-tech-title');
+			setTimeout(() => {
+				window.addEventListener('scroll', this.scrollHandler);
+				this.checkAllIsInViewPort();
+			}, 100);
+		},
 		template: `
-		`;
+		<div>
+			<katchmon-gnb-component></katchmon-gnb-component>
+			<div class="katchmon-content-self katchmon-introduce-tech">
+				<h1 id="katchmon-introduce-tech-title">준비된 기술들</h1>
+				<p>어떤 게 필요할 지 몰라서 그냥 다 준비했어요.</p>
+				<div class="katchmon-introduce-tech-chart-self margin-top-10">
+					<ul>
+						<li v-for="techData in tempTechDataList">
+							<div class="katchmon-introduce-tech-chart-element-container">
+								<div class="katchmon-introduce-tech-chart-element-title"><p class="small-text">{{techData.name}}</p></div>
+								<div class="katchmon-introduce-tech-chart-element-scoreContainer">
+									<transition name="slide-frame">
+										<div v-if="tech.isShowTechScore" class="katchmon-introduce-tech-chart-element-score" :style="{width: techData.score + '%'}"><p>&nbsp;</p></div>
+									</transition>
+								</div>
+								<div class="katchmon-introduce-tech-chart-element-textContainer">
+									<transition name="fade">
+										<p v-if="tech.isShowTechScore" class="small-text">{{techData.score}}</p>
+									</transition>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="katchmon-content-self katchmon-introduce-career">
+				<h1>다양한 경험들</h1>
+				<p>프로젝트부터 유지보수까지</p>
+				<div class="katchmon-introduce-career-banner-container">
+					<div v-for="careerData in tempCareerDataList" class="katchmon-introduce-career-banner-item" :style="{backgroundColor: careerData.backgroundColor, border: '1px solid ' + careerData.borderColor}">
+						<div class="katchmon-introduce-career-banner-text">
+							<p class="katchmon-introduce-career-banner-responsibility">{{careerData.responsibility}} | {{careerData.serviceType}}</p>
+							<h3 style="color: black;">{{careerData.title}}</h3>
+						</div>
+						<img class="katchmon-introduce-career-banner-image" :src="careerData.imageUrl" alt="">
+					</div>
+				</div>
+			</div>
+			<katchmon-question-component></katchmon-question-component>
+		</div>`
 	});
 	</script>
-	
 </body>
